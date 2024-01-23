@@ -16,6 +16,5 @@ Simple and convenient todo list for organizing your day.
 
 1. HTML
 2. CSS
-3. SCSS
 4. JS
 5. React
