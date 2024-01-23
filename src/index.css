@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--clr-main: var(--clr-white); 
+	--clr-main-thin: var(--clr-gray); 
+	--clr-bg: var(--clr-purple);
+
+	--clr-white: white;
+	--clr-black: hsl(0, 0%, 22%);
+	--clr-gray: hsl(227, 23%, 68%);
+	--clr-purple: hsl(267, 73%, 71%);
+	--clr-purple-dark: hsl(267, 100%, 60%);
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-weight: 400;
+	font-style: normal;
+	src: url("../public/assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
