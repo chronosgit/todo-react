@@ -1,0 +1,7 @@
+.button {
+    --size: 1.275rem;
+    min-width: var(--size);
+    min-height: var(--size);
+    border: 1px solid var(--clr-bg);
+    border-radius: 50%;
+}

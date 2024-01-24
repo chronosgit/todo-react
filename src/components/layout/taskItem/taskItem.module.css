@@ -1,0 +1,10 @@
+.task, .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.title {
+    color: var(--clr-main-thin);
+}

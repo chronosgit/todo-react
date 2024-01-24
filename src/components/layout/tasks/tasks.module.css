@@ -1,0 +1,7 @@
+.tasks {
+    padding: 2rem;
+    min-height: 10rem;
+    display: grid;
+    gap: 1rem;
+    box-shadow: 0 0 5px var(--clr-gray);
+}
