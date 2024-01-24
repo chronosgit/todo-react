@@ -8,12 +8,30 @@ html {
 	--clr-main: var(--clr-white); 
 	--clr-main-thin: var(--clr-gray); 
 	--clr-bg: var(--clr-purple);
+	--clr-theme-icon: var(--clr-yellow);
+	--clr-theme-bg: var(--clr-blue);
 
 	--clr-white: white;
 	--clr-black: hsl(0, 0%, 22%);
 	--clr-gray: hsl(227, 23%, 68%);
 	--clr-purple: hsl(267, 73%, 71%);
 	--clr-purple-dark: hsl(267, 100%, 60%);
+	--clr-yellow: hsl(51, 100%, 52%);
+	--clr-blue: hsl(192, 82%, 73%);
+
+	--theme-icon-offset: var(--theme-icon-light-offset);
+	--theme-icon-light-offset: 3px;
+	--theme-icon-dark-offset: 26px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--clr-main-thin: var(--clr-white); 
+		--clr-bg: var(--clr-black);
+		--clr-theme-icon: var(--clr-white);
+		--clr-theme-bg: var(--clr-gray);
+		--theme-icon-offset: var(--theme-icon-dark-offset);
+	}	
 }
 
 @font-face {
@@ -31,6 +49,7 @@ html {
 
 body {
 	margin: 0;
+	color: var(--clr-main);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +58,14 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+a {
+	color: var(--clr-main);
+	text-decoration: none;
 }
