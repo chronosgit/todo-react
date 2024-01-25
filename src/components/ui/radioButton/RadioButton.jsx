@@ -1,9 +1,9 @@
 import styles from "./radioButton.module.css";
 
-const RadioButton = ({onClick}) => {
+const RadioButton = () => {
 
     return (
-        <button className={styles.button} onClick={onClick}/>
+        <button className={styles.button} />
     )
 }
 

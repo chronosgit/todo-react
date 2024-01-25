@@ -6,8 +6,8 @@ const TaskItem = ({task, removeTask, completeTask}) => {
 
     return (
         <div className={styles.task} aria-label="task">
-            <div className={styles.content}>
-                <RadioButton onClick={() => completeTask(task)} />
+            <div className={styles.content} onClick={() => completeTask(task)}>
+                <RadioButton />
 
                 <p className={styles.title}>{task.title}</p>
             </div>

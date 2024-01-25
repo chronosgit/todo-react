@@ -5,6 +5,10 @@
     gap: 0.5rem;
 }
 
+.content {
+    cursor: pointer;
+}
+
 .title {
     color: var(--clr-main-thin);
 }
