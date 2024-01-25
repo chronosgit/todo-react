@@ -15,7 +15,12 @@ const App = () => {
 	const [tasks, setTasks] = useState([]);
 
 	const addTask = (task) => {
-		console.log(task);
+		setTasks(prevTasks => {
+			return [
+				...prevTasks,
+				task,
+			]
+		});
 	}
 
 	const toggleModal = () => {
@@ -33,7 +38,9 @@ const App = () => {
 	}
 
 	const removeTask = (task) => {
-		console.log(task);
+		setTasks(prev => {
+			return prev.filter(t => t.id !== task.id);
+		});
 	}
 
 	return (
@@ -47,10 +54,10 @@ const App = () => {
 					{
 						isModalOpened
 						?
-							<TaskWriter addTask={addTask} />
+							<TaskWriter addTask={addTask} toggleModal={toggleModal} />
 						:
 							<Tasks 
-								// tasks={tasks}
+								tasks={tasks}
 								completeTask={completeTask} 
 								removeTask={removeTask}
 							/>

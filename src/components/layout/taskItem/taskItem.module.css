@@ -1,12 +1,12 @@
-.task, .content { /* whole task item */
+.task, .content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 0.5rem;
 }
 
-.content { /* radio button and title */
+.content {
     cursor: pointer;
-    align-items: flex-start;
 }
 
 .title {

@@ -9,7 +9,7 @@ const TaskItem = ({task, removeTask, completeTask}) => {
             <div className={styles.content} onClick={() => completeTask(task)}>
                 <RadioButton />
 
-                <p className={styles.title}>{task.title}</p>
+                <p className={styles.title}>{task.text}</p>
             </div>
 
             <Trashcan onClick={() => removeTask(task)} />
