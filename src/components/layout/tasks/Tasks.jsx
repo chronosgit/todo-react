@@ -1,11 +1,13 @@
 import TaskItem from "../taskItem/TaskItem";
 import styles from "./tasks.module.css";
 
-const Tasks = ({tasks, addTask, completeTask, removeTask}) => {
+const Tasks = ({tasks, completeTask, removeTask}) => {
+    const doTasksExist = (tasks && tasks.length > 0);
+
     return (
         <div className={styles.tasks} aria-label="tasks">
             {
-                tasks
+                doTasksExist
                 ?
                     tasks.map((task, i) => {
                         return (

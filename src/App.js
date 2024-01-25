@@ -1,26 +1,31 @@
+import { useState } from 'react';
 import Container from './components/layout/container/Container';
 import Header from "./components/layout/header/Header";
 import Tasks from './components/layout/tasks/Tasks';
 import Divider from './components/ui/divider/Divider';
-import AddButton from './components/ui/addButton/AddButton';
+import ButtonRounded from './components/ui/buttonRounded/ButtonRounded';
+import TaskWriter from "./components/layout/taskWriter/TaskWriter";
 import './App.css';
 
 const App = () => {
-	const tasks = [
-		{
-			id: 1,
-			title: "Rstajfgsaka;wlgl",
-			isChecked: true,
-		},
-		{
-			id: 2,
-			title: "Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum",
-			isChecked: false,
-		},
-	];
+	const addMessage = "+ New task";
+	const closeMessage = "X Close";
+	const [isModalOpened, setModalOpened] = useState(false);
+	const [btnMessage, setBtnMessage] = useState(addMessage);
+	const [tasks, setTasks] = useState([]);
 
 	const addTask = (task) => {
 		console.log(task);
+	}
+
+	const toggleModal = () => {
+		if(isModalOpened) {
+			setBtnMessage(addMessage);
+		} else {
+			setBtnMessage(closeMessage)
+		}
+
+		setModalOpened(!isModalOpened);
 	}
 
 	const completeTask = (task) => {
@@ -33,18 +38,26 @@ const App = () => {
 
 	return (
 		<div className="App">
-			<Container>
+			<Container marginInline="auto" maxWidth="30rem">
 				<Header />
 
 				<Divider height={2} />
 
-				<Tasks 
-					tasks={tasks}
-					completeTask={completeTask} 
-					removeTask={removeTask}
-				/>
+				<Container marginInline="auto" maxWidth="30rem" minHeight="15rem">
+					{
+						isModalOpened
+						?
+							<TaskWriter addTask={addTask} />
+						:
+							<Tasks 
+								// tasks={tasks}
+								completeTask={completeTask} 
+								removeTask={removeTask}
+							/>
+					}
+				</Container>
 
-				<AddButton />
+				<ButtonRounded text={btnMessage} onClick={toggleModal} />
 			</Container>
 		</div>
 	);

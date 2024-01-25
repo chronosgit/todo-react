@@ -3,7 +3,11 @@
     padding-block-end: 4rem;
     min-height: 10rem;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     background-color: var(--clr-bg-secondary);
-    box-shadow: 0 0 5px var(--clr-gray);
+    box-shadow: 0 0 1px var(--clr-gray);
+}
+
+.message {
+    color: var(--clr-main-thin);
 }

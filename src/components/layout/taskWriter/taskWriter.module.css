@@ -1,0 +1,35 @@
+.modal {
+    padding: 2rem;
+    padding-block-end: 4rem;
+    min-height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    background-color: var(--clr-bg-secondary);
+    box-shadow: 0 0 1px var(--clr-gray);
+}
+
+.input {
+    flex: 1;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--clr-gray);
+    border-radius: 0.5rem;
+}
+
+.input::placeholder {
+    font-size: 1rem;
+}
+
+.button {
+    padding: 1rem;
+    text-transform: uppercase;
+    color: var(--clr-black);
+    font-weight: 900;
+    background-color: var(--clr-blue);
+    border-radius: 0.5rem;
+}
+
+.button:hover {
+    background-color: hsl(192, 57%, 60%);
+}
