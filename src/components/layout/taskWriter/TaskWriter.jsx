@@ -38,6 +38,7 @@ const TaskWriter = ({addTask, toggleModal}) => {
                 className={styles.input} 
                 onChange={taskOnChange}
                 onKeyDown={inputOnKeyDown}
+                autoFocus
                 aria-label="task-name"
             />
 

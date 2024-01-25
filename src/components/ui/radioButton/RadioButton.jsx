@@ -1,9 +1,13 @@
 import styles from "./radioButton.module.css";
 
-const RadioButton = () => {
+const RadioButton = ({isFilled}) => {
+
+    const filledStyle = {
+        backgroundColor: isFilled && "var(--clr-purple)",
+    }
 
     return (
-        <button className={styles.button} />
+        <button className={styles.button} style={filledStyle} />
     )
 }
 

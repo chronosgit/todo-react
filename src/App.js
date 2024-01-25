@@ -15,12 +15,7 @@ const App = () => {
 	const [tasks, setTasks] = useState([]);
 
 	const addTask = (task) => {
-		setTasks(prevTasks => {
-			return [
-				...prevTasks,
-				task,
-			]
-		});
+		setTasks(prevTasks => [...prevTasks, task]);
 	}
 
 	const toggleModal = () => {
@@ -33,14 +28,21 @@ const App = () => {
 		setModalOpened(!isModalOpened);
 	}
 
+
 	const completeTask = (task) => {
-		console.log(task)
+		setTasks(prevTasks => {
+			return prevTasks.map(t => {
+				return {
+					id: t.id,
+					text: t.text,
+					isCompleted: t.id === task.id ? !t.isCompleted : t.isCompleted,
+				}
+			})
+		});
 	}
 
 	const removeTask = (task) => {
-		setTasks(prev => {
-			return prev.filter(t => t.id !== task.id);
-		});
+		setTasks(prev => prev.filter(t => t.id !== task.id));
 	}
 
 	return (
