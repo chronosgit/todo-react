@@ -1,13 +1,9 @@
 import styles from "./radioButton.module.css";
 
-const RadioButton = ({parentElement, onClick}) => {
-
-    const onButtonClick = () => {
-        onClick(parentElement);
-    }
+const RadioButton = ({onClick}) => {
 
     return (
-        <button className={styles.button} onClick={onButtonClick}/>
+        <button className={styles.button} onClick={onClick}/>
     )
 }
 

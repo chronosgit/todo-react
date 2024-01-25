@@ -1,13 +1,9 @@
 import styles from "./trashcan.module.css";
 
-const Trashcan = ({parentElement, onClick}) => {
-
-    const onTrashcanClick = () => {
-        onClick(parentElement);
-    }
+const Trashcan = ({onClick}) => {
 
     return (
-        <button className={styles.trashcan} onClick={onTrashcanClick}> 
+        <button className={styles.trashcan} onClick={onClick}> 
             <img src="./assets/icons/trash.png" alt="trashcan" className={styles.image} />
         </button>
     )

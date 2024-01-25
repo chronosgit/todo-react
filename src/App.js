@@ -23,7 +23,7 @@ const App = () => {
 	}
 
 	const completeTask = (task) => {
-		console.log(`completed task: ${task}`);
+		console.log(task);
 	}
 
 	const removeTask = (task) => {
