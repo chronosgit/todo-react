@@ -10,7 +10,7 @@ const App = () => {
 		{
 			id: 1,
 			title: "Rstajfgsaka;wlgl",
-			isChecked: false,
+			isChecked: true,
 		},
 		{
 			id: 2,
