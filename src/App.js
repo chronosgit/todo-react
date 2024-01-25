@@ -2,6 +2,7 @@ import Container from './components/layout/container/Container';
 import Header from "./components/layout/header/Header";
 import Tasks from './components/layout/tasks/Tasks';
 import Divider from './components/ui/divider/Divider';
+import AddButton from './components/ui/addButton/AddButton';
 import './App.css';
 
 const App = () => {
@@ -19,15 +20,15 @@ const App = () => {
 	];
 
 	const addTask = (task) => {
-		console.log(`new task: ${task}`);
-	}
-
-	const completeTask = (task) => {
 		console.log(task);
 	}
 
+	const completeTask = (task) => {
+		console.log(task)
+	}
+
 	const removeTask = (task) => {
-		console.log(`removed task: ${task}`);
+		console.log(task);
 	}
 
 	return (
@@ -42,6 +43,8 @@ const App = () => {
 					completeTask={completeTask} 
 					removeTask={removeTask}
 				/>
+
+				<AddButton />
 			</Container>
 		</div>
 	);

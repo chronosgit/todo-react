@@ -1,3 +1,17 @@
-.addButton {
-    
+.button {
+    display: block;
+    margin-inline: auto;
+    padding: 1rem 2rem;
+    transform: translateY(-2rem);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--clr-main);
+    background-color: var(--clr-bg);
+    box-shadow: 0 0 0.5rem var(--clr-gray);
+    border-radius: 2rem;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: var(--clr-purple-dark);
 }

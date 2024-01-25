@@ -2,6 +2,6 @@
     --size: 1.275rem;
     min-width: var(--size);
     min-height: var(--size);
-    border: 1px solid var(--clr-bg);
+    border: 1px solid var(--clr-main-thin);
     border-radius: 50%;
 }

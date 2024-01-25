@@ -8,6 +8,7 @@ html {
 	--clr-main: var(--clr-white); 
 	--clr-main-thin: var(--clr-gray); 
 	--clr-bg: var(--clr-purple);
+	--clr-bg-secondary: var(--clr-white);
 	--clr-theme-icon: var(--clr-yellow);
 	--clr-theme-bg: var(--clr-blue);
 
@@ -28,6 +29,7 @@ html {
 	:root {
 		--clr-main-thin: var(--clr-white); 
 		--clr-bg: var(--clr-black);
+		--clr-bg-secondary: var(--clr-black);
 		--clr-theme-icon: var(--clr-white);
 		--clr-theme-bg: var(--clr-gray);
 		--theme-icon-offset: var(--theme-icon-dark-offset);
